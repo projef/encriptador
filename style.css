@@ -1,0 +1,182 @@
+:root {
+  --primary-color: #0a3871;
+  --secondary-color: #d8dfe8;
+  --text-color: #495057;
+  --background-color: #f3f5fc;
+  --font-size-small: 12px;
+  --font-size-medium: 18px;
+  --font-size-large: 24px;
+  --button-width: 100%;
+  --button-height: 50px;
+  --border-radius: 24px;
+}
+
+* {
+  background: var(--background-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size-medium);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 120px;
+  height: 70px;
+  margin: 40px 0 0 40px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 700px;
+}
+
+section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-area,
+.mensaje {
+  width: 90%;
+  border: none;
+  color: var(--primary-color);
+  margin-top: 20px;
+  text-transform: lowercase;
+  font-size: 1rem;
+  height: 120px;
+  padding: 10px;
+  border-radius: var(--border-radius);
+}
+
+::placeholder {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.text-area:focus,
+.mensaje:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.informacion {
+  display: flex;
+  margin-top: 20%;
+  width: 229px;
+  height: 18px;
+}
+
+.informacion_h {
+  color: var(--text-color);
+  font-size: var(--font-size-small);
+  margin-left: 2%;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.botones button {
+  width: 100%;
+  height: var(--button-height);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn-encritar {
+  background-color: var(--primary-color);
+  color: #e9ecf8;
+}
+
+.btn-desencriptar {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-encritar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover {
+  background-color: var(--primary-color);
+  color: #e9ecf8;
+}
+
+.mensaje {
+  background: white;
+  background-size: contain; /* Ajustamos la imagen al contenedor */
+}
+
+.img__esperar{
+    width: 23%; /* La imagen ocupará el 100% del ancho del contenedor padre */
+    height: auto; /* La altura se ajustará automáticamente */
+    max-width: 500px; /* Ajuste opcional para limitar el tamaño máximo de la imagen */
+    margin-left: 180px;
+
+
+}
+
+.btn-copiar {
+  margin-top: 7px;
+  height: var(--button-height);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+h3 {
+  margin-top: 14%;
+}
+
+h3,
+p {
+  margin-left: 135px;
+}
+
+p {
+  font-size: var(--font-size-small);
+}
+
+
+.footer{
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+
+  main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .botones {
+    flex-direction: row;
+    gap: 30px; 
+  }
+
+  .text-area,
+  .mensaje {
+    font-size: var(--font-size-large);
+    height: 200px; 
+  }
+}
